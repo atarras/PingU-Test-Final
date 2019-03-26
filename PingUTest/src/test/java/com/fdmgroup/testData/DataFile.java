@@ -31,5 +31,7 @@ public class DataFile {
     public static String linkedInUrl = "www.linkedin/jdoe"; 
     public static String stream = "java developer";  
     
+    public static String searchGroupName = "TD Bank"; 
+    public static String searchUserName = "John Doe"; 
 
 }
