@@ -3,6 +3,7 @@ package com.fdmgroup.testScript;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.fdmgroup.webPage.RegistrationPage;
+import com.fdmgroup.testData.DataFile;
 import com.fdmgroup.util.DriverUtilities;
 
 import cucumber.api.java.en.Given;
@@ -28,17 +29,17 @@ public class RegistrationStepDefinitionTest {
 	@When("^User enter FDM email$") 
 	public void enterWithValidEmail() throws InterruptedException{
 	
-        RegistrationPage.firstNameBox(driver).sendKeys("John"); 
-		RegistrationPage.lastNameBox(driver).sendKeys("Doe");
-		RegistrationPage.usernameBox(driver).sendKeys("jdoe");
-		RegistrationPage.passwordBox(driver).sendKeys("Pass123");
-		RegistrationPage.confirmPpasswordBox(driver).sendKeys("Pass123");
-		RegistrationPage.emailBox(driver).sendKeys("j.d@fdmgroup.com");
-		RegistrationPage.cityBox(driver).sendKeys("toronto");
-		RegistrationPage.countryBox(driver).sendKeys("canada");
-		RegistrationPage.secuAnswer(driver).sendKeys("saint john");
-		RegistrationPage.linkedInBox(driver).sendKeys("www.linkedin/jdoe");
-		RegistrationPage.streamBox(driver).sendKeys("java developer");
+        RegistrationPage.firstNameBox(driver).sendKeys(DataFile.firstName); 
+		RegistrationPage.lastNameBox(driver).sendKeys(DataFile.lastName);
+		RegistrationPage.usernameBox(driver).sendKeys(DataFile.signUpUserName);
+		RegistrationPage.passwordBox(driver).sendKeys(DataFile.signUpPassword);
+		RegistrationPage.confirmPpasswordBox(driver).sendKeys(DataFile.confirmPassword);
+		RegistrationPage.emailBox(driver).sendKeys(DataFile.signUpEmail);
+		RegistrationPage.cityBox(driver).sendKeys(DataFile.city);
+		RegistrationPage.countryBox(driver).sendKeys(DataFile.country);
+		RegistrationPage.secuAnswer(driver).sendKeys(DataFile.secuAnswer);
+		RegistrationPage.linkedInBox(driver).sendKeys(DataFile.linkedInUrl);
+		RegistrationPage.streamBox(driver).sendKeys(DataFile.stream);
 		
 	}
 	
@@ -51,17 +52,17 @@ public class RegistrationStepDefinitionTest {
 	@When("^User enter non FDM email$")
 	public void enterWithInvalidEmail(){
 		
-		RegistrationPage.firstNameBox(driver).sendKeys("John");
-		RegistrationPage.lastNameBox(driver).sendKeys("Doe");
-		RegistrationPage.usernameBox(driver).sendKeys("jdoee");
-		RegistrationPage.passwordBox(driver).sendKeys("Pass123");
-		RegistrationPage.confirmPpasswordBox(driver).sendKeys("Pass123");
-		RegistrationPage.emailBox(driver).sendKeys("j.d@test.com");
-		RegistrationPage.cityBox(driver).sendKeys("toronto");
-		RegistrationPage.countryBox(driver).sendKeys("canada");
-		RegistrationPage.secuAnswer(driver).sendKeys("saint john");
-		RegistrationPage.linkedInBox(driver).sendKeys("www.linkedin/jdoe");
-		RegistrationPage.streamBox(driver).sendKeys("java developer");
+		RegistrationPage.firstNameBox(driver).sendKeys(DataFile.firstName);
+		RegistrationPage.lastNameBox(driver).sendKeys(DataFile.lastName);
+		RegistrationPage.usernameBox(driver).sendKeys(DataFile.signUpUserNameSecond);
+		RegistrationPage.passwordBox(driver).sendKeys(DataFile.signUpPassword);
+		RegistrationPage.confirmPpasswordBox(driver).sendKeys(DataFile.confirmPassword);
+		RegistrationPage.emailBox(driver).sendKeys(DataFile.signUpInvalidEmail);
+		RegistrationPage.cityBox(driver).sendKeys(DataFile.city);
+		RegistrationPage.countryBox(driver).sendKeys(DataFile.country);
+		RegistrationPage.secuAnswer(driver).sendKeys(DataFile.secuAnswer);
+		RegistrationPage.linkedInBox(driver).sendKeys(DataFile.linkedInUrl);
+		RegistrationPage.streamBox(driver).sendKeys(DataFile.stream);
 	}
 	
 	
@@ -74,17 +75,17 @@ public class RegistrationStepDefinitionTest {
 	@When("^User enter jdoe to username field$")
 	public void enterDuplicateUsername(){
 		
-		RegistrationPage.firstNameBox(driver).sendKeys("John");
-		RegistrationPage.lastNameBox(driver).sendKeys("Doe");
-		RegistrationPage.usernameBox(driver).sendKeys("jdoe");
-		RegistrationPage.passwordBox(driver).sendKeys("Pass123");
-		RegistrationPage.confirmPpasswordBox(driver).sendKeys("Pass123");
-		RegistrationPage.emailBox(driver).sendKeys("j.d@fdmgroup.com");
-		RegistrationPage.cityBox(driver).sendKeys("toronto");
-		RegistrationPage.countryBox(driver).sendKeys("canada");
-		RegistrationPage.secuAnswer(driver).sendKeys("saint john");
-		RegistrationPage.linkedInBox(driver).sendKeys("www.linkedin/jdoe");
-		RegistrationPage.streamBox(driver).sendKeys("java developer");
+		RegistrationPage.firstNameBox(driver).sendKeys(DataFile.firstName);
+		RegistrationPage.lastNameBox(driver).sendKeys(DataFile.lastName);
+		RegistrationPage.usernameBox(driver).sendKeys(DataFile.signUpUserName);
+		RegistrationPage.passwordBox(driver).sendKeys(DataFile.signUpPassword);
+		RegistrationPage.confirmPpasswordBox(driver).sendKeys(DataFile.confirmPassword);
+		RegistrationPage.emailBox(driver).sendKeys(DataFile.signUpEmail);
+		RegistrationPage.cityBox(driver).sendKeys(DataFile.city);
+		RegistrationPage.countryBox(driver).sendKeys(DataFile.country);
+		RegistrationPage.secuAnswer(driver).sendKeys(DataFile.secuAnswer);
+		RegistrationPage.linkedInBox(driver).sendKeys(DataFile.linkedInUrl);
+		RegistrationPage.streamBox(driver).sendKeys(DataFile.stream);
 	}
 	
 	@Then("^User fail to register with duplicate username$")
