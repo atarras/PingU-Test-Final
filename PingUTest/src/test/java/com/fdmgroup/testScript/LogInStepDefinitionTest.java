@@ -26,7 +26,7 @@ public class LogInStepDefinitionTest {
 
     @Given("^User navigate to the home page$")
     public void navigateToLogInPage() {
-        driver.get(DataFile.webURL);
+        driver.get(DataFile.homeURL);
     }
 
     @When("^User enters valid username and valid password$")

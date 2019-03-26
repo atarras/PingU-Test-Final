@@ -2,8 +2,7 @@ Feature: Log in function
 
   Background: User can load the website
     Given User launches web browser
-		
-	@SmokeTest
+	
   Scenario: User can log into the application with valid username and password
     Given User navigate to the home page
     When User enters valid username and valid password

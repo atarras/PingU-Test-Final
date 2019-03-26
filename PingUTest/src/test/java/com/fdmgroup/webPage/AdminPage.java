@@ -31,4 +31,8 @@ public class AdminPage {
 		element = driver.findElement(By.xpath("//*[@class='trainee-actions']/i"));
 		return element;
 	}
+	public static WebElement editConfirmationButton(WebDriver driver) {
+		element = driver.findElement(By.id("confirm-edit-trainee"));
+		return element;
+	}
 }
