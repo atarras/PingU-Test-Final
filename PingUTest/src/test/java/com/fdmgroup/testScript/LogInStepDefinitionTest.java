@@ -55,16 +55,26 @@ public class LogInStepDefinitionTest {
 
     @When("^User clicks on Login button$")
     public void clickLoginButton() {
-        LogInPage.submitButton(driver).submit();
+        LogInPage.submitButton(driver).click();
+    }
+
+    @When("^User clicks on Logout button$")
+    public void clickLogoutButton() {
+        LogInPage.logoutButton(driver).click();
     }
 
     @Then("^User will be redirected to the home page$")
     public void verifyHomePageLabel() {
-        assertEquals(LogInPage.welcomeMessage(driver).getText(), DataFile.actualWelcomeMessage);
+        assertEquals(LogInPage.welcomeMessage(driver).getText(), DataFile.expectedWelcomeMessage);
+    }
+
+    @Then("^User will be redirected to the login page$")
+    public void verifyLoginPageLabel() {
+        assertEquals(LogInPage.loginMessage(driver).getText(), DataFile.expectedLoginMessage);
     }
 
     @Then("^Invalid username/password error message is displayed$")
     public void verifyErrorMessageLabel() {
-        assertEquals(LogInPage.errorMessage(driver).getText(), DataFile.actualErrorMessage);
+        assertEquals(LogInPage.errorMessage(driver).getText(), DataFile.expectedErrorMessage);
     }
 }

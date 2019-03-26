@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.fdmgroup.testData.DataFile;
 import com.fdmgroup.util.DriverUtilities;
-import com.fdmgroup.webPage.LogInPage;
 import com.fdmgroup.webPage.PasswordRecoveryPage;
 
 import cucumber.api.java.en.Given;
@@ -16,16 +15,12 @@ import cucumber.api.java.en.Then;
 
 public class PasswordRecoveryStepDefinitionTest {
 
-    private DriverUtilities driverUtilities;
-    private WebDriver driver;
+    private DriverUtilities driverUtilities = DriverUtilities.getInstanceOfDriverUtilities();
+    private WebDriver driver = driverUtilities.getDriver();
 
     @Given("^User clicks on the forgot password link$")
     public void clickForgetPasswordLink() {
-        driverUtilities = DriverUtilities.getInstanceOfDriverUtilities();
-        driver = driverUtilities.getDriver();
-        // driver.get("http://");
         PasswordRecoveryPage.forgotPasswordLink(driver).click();
-
     }
 
     @When("^User enters valid username$")
@@ -76,6 +71,11 @@ public class PasswordRecoveryStepDefinitionTest {
     public void enterNotMatchingNewPassword() {
         PasswordRecoveryPage.newPasswordField(driver).sendKeys(DataFile.newPassword);
         PasswordRecoveryPage.confirmNewPasswordField(driver).sendKeys(DataFile.invalidNewPassword);
+    }
+
+    @When("^User clicks on Submit button$")
+    public void clickSubmitButton() {
+        PasswordRecoveryPage.submitButton(driver).click();
     }
 
     @Then("^Password successfully changed message will be displayed$")

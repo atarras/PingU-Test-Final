@@ -23,6 +23,16 @@ public class LogInPage {
         return element;
     }
 
+    public static WebElement logoutButton(WebDriver driver) {
+        element = driver.findElement(By.xpath("//*[@id='navbarSupportedContent']/ul/li[5]/a"));
+        return element;
+    }
+
+    public static WebElement loginMessage(WebDriver driver) {
+        element = driver.findElement(By.id("login-title"));
+        return element;
+    }
+
     public static WebElement welcomeMessage(WebDriver driver) {
         element = driver.findElement(By.className("welcome-header"));
         return element;

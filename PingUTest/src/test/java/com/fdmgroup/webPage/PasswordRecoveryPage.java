@@ -39,7 +39,7 @@ public class PasswordRecoveryPage {
     }
 
     public static WebElement submitButton(WebDriver driver) {
-        element = driver.findElement(By.linkText("Forgot Password?"));
+        element = driver.findElement(By.xpath("//*[@id='forgot-password-modal']/div/div/div[2]/form/div[6]/button"));
         return element;
     }
 }
