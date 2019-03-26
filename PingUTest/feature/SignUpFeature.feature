@@ -1,3 +1,5 @@
+
+@SignTest
 Feature: Registration functionality 
 
 Scenario: User successfully register with valid FDM Email

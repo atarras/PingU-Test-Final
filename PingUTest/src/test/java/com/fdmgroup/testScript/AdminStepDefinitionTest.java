@@ -44,6 +44,8 @@ public class AdminStepDefinitionTest {
 		WebElement unlock = driver.findElement(By.id("trainee-status-open"));
 		if(lock.isEnabled()) {
 			lock.click();
+		}else {
+			
 		}
 		AdminPage.editConfirmationButton(driver).click();
 	}
