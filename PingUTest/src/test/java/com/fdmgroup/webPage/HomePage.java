@@ -6,6 +6,10 @@ import org.openqa.selenium.WebElement;
 
 public class HomePage {
 
+	public static WebElement welcomeMessage(WebDriver driver) {
+		return driver.findElement(By.xpath("//h1[@class='welcome-header']"));
+	}
+	
 	public static WebElement searchBox(WebDriver driver) {
 		return driver.findElement(By.xpath("//input[@placeholder='Search']"));
 	}

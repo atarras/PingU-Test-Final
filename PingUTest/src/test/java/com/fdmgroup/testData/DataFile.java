@@ -20,7 +20,7 @@ public class DataFile {
     
     public static String firstName = "John"; 
     public static String lastName = "Doe"; 
-    public static String signUpUserName = "jdoe"; 
+    public static String signUpUserName = "HaveFun"; 
     public static String signUpUserNameSecond = "jdoee";
     public static String signUpPassword = "Pass123"; 
     public static String confirmPassword = "Pass123"; 
@@ -31,8 +31,10 @@ public class DataFile {
     public static String secuAnswer = "saint john"; 
     public static String linkedInUrl = "www.linkedin/jdoe"; 
     public static String stream = "java developer";  
+    public static String signUpValidateMessage = "Thank you for registering. Your request is currently being processed by our admin team. We will contact you once the profile is active.";
     
     public static String searchGroupName = "TD Bank"; 
     public static String searchUserName = "John Doe"; 
 
+    public static String homePageWelcome = "Welcome " + firstName + " " + lastName; 
 }
