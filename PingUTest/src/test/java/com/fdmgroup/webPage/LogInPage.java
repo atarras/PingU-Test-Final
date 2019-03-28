@@ -34,7 +34,7 @@ public class LogInPage {
     }
 
     public static WebElement welcomeMessage(WebDriver driver) {
-        element = driver.findElement(By.className("welcome-header"));
+        element = driver.findElement(By.tagName("h1"));
         return element;
     }
 
