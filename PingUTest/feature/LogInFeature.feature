@@ -1,3 +1,4 @@
+@RunThis
 Feature: Log in function
 
   Background: User can load the website

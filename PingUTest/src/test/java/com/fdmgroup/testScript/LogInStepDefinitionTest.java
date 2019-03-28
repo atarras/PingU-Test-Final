@@ -71,7 +71,7 @@ public class LogInStepDefinitionTest {
 
     @Then("^User will be redirected to the login page$")
     public void verifyLoginPageLabel() {
-        assertEquals(LogInPage.loginMessage(driver).getText(), DataFile.expectedLoginMessage);
+        assertEquals(driver.getCurrentUrl(), DataFile.expectedLoginURL);
     }
 
     @Then("^Invalid username/password error message is displayed$")
