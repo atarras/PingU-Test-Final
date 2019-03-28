@@ -66,7 +66,7 @@ public class LogInStepDefinitionTest {
     @Then("^User will be redirected to the home page$")
     public void verifyHomePageLabel() throws InterruptedException {
         Thread.sleep(500);
-        assertEquals(LogInPage.welcomeMessage(driver).getText(), DataFile.expectedWelcomeMessage);
+        assertEquals(LogInPage.welcomeMessage(driver).getText(), DataFile.homePageWelcome);
     }
 
     @Then("^User will be redirected to the login page$")
