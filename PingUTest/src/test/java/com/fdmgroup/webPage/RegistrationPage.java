@@ -21,11 +21,11 @@ public class RegistrationPage {
 	}
 	
 	public static WebElement passwordBox(WebDriver driver) {
-		return driver.findElement(By.xpath("//input[@id='signup-password-field']"));
+		return driver.findElement(By.xpath("//input[@id='signup-password']"));
 	}
 	
 	public static WebElement confirmPpasswordBox(WebDriver driver) {
-		return driver.findElement(By.xpath("//input[@id='signup-confirm-password-field']"));
+		return driver.findElement(By.xpath("//input[@id='signup-confirm-password']"));
 	}
 	
 	public static WebElement emailBox(WebDriver driver) {
