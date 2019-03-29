@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.fdmgroup.testData.DataFile;
 import com.fdmgroup.util.DriverUtilities;
+import com.fdmgroup.webPage.LogInPage;
 import com.fdmgroup.webPage.PasswordRecoveryPage;
 
 import cucumber.api.java.en.Given;
@@ -30,7 +31,8 @@ public class PasswordRecoveryStepDefinitionTest {
     }
 
     @When("^User selects valid security question$")
-    public void selectValidSecurityQuestion() {
+    public void selectValidSecurityQuestion() throws InterruptedException {
+        Thread.sleep(1000);
         Select questionSelected = new Select(PasswordRecoveryPage.securityQuestionDropDown(driver));
         questionSelected.selectByVisibleText(DataFile.secretQuestion);
     }
@@ -51,8 +53,7 @@ public class PasswordRecoveryStepDefinitionTest {
     }
 
     @When("^User enters invalid username$")
-    public void enterInvalidUsername() throws InterruptedException {
-        Thread.sleep(500);
+    public void enterInvalidUsername() {
         PasswordRecoveryPage.usernameField(driver).sendKeys(DataFile.invalidUsername);
     }
 
@@ -88,5 +89,11 @@ public class PasswordRecoveryStepDefinitionTest {
     public void verifyFailureMessage() {
         System.out.println(DataFile.wip);
         assertEquals(DataFile.wip, "");
+    }
+
+    @Then("^User enters valid username and valid new password$")
+    public void enterValidUsernameValidPassword() {
+        LogInPage.usernameField(driver).sendKeys(DataFile.username);
+        LogInPage.passwordField(driver).sendKeys(DataFile.newPassword);
     }
 }

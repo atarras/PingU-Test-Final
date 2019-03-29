@@ -14,7 +14,7 @@ public class PasswordRecoveryPage {
     }
 
     public static WebElement usernameField(WebDriver driver) {
-        element = driver.findElement(By.xpath("//*[@id='forgot-password-modal']/div/div/div[2]/form/div[1]/input"));
+        element = driver.findElement(By.xpath("//*[@id='recover-password-username']"));
         return element;
     }
 
@@ -24,22 +24,22 @@ public class PasswordRecoveryPage {
     }
 
     public static WebElement securityAnswerField(WebDriver driver) {
-        element = driver.findElement(By.xpath("//*[@id='forgot-password-modal']/div/div/div[2]/form/div[3]/input"));
+        element = driver.findElement(By.xpath("//*[@id='rp-security-answer']"));
         return element;
     }
 
     public static WebElement newPasswordField(WebDriver driver) {
-        element = driver.findElement(By.xpath("//*[@id='forgot-password-modal']/div/div/div[2]/form/div[4]/input"));
+        element = driver.findElement(By.xpath("//*[@id='rp-new-password']"));
         return element;
     }
 
     public static WebElement confirmNewPasswordField(WebDriver driver) {
-        element = driver.findElement(By.xpath("//*[@id='forgot-password-modal']/div/div/div[2]/form/div[5]/input"));
+        element = driver.findElement(By.xpath("//*[@id='rp-confirm-new-password']"));
         return element;
     }
 
     public static WebElement submitButton(WebDriver driver) {
-        element = driver.findElement(By.xpath("//*[@id='forgot-password-modal']/div/div/div[2]/form/div[6]/button"));
+        element = driver.findElement(By.xpath("//*[@id='recover-password-button']"));
         return element;
     }
 }
